@@ -380,19 +380,28 @@ header img{
     line-height: 1.8rem;
     color: #757575;
 }
+
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: overlay;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
 .plans-container-card{
     position:relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 290px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 5px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89,73,30,0.16);
 }
-/* aqui no se´por que hay un bug jiiji, ya lo resolví*/
+
 .recomended{
     position: absolute;
     width: 120px;
@@ -406,26 +415,81 @@ header img{
     color: var(--just-white);
     
 }
+/* ahora no sé por que no se aplican los estilos aquí*/
 .plan-class--title {
     padding-top: 30px;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.8rem;
-    color: #000;
+    color: black;
 }
 .plan-card--price{
+    position: relative;
     padding: 5px 0;
-    font-size: 5.2rem;
+    font-size: 5.3rem;
     font-weight: bold;
-    line-height: 5.3rem;
+    line-height: 6.3rem;
     color: #000;
-}
-.plan-card--price span{
-    font-size: 1.2rem;
-    font-weight: 300;
+
 }
 
+.plan-card--price span {
+    position: absolute;
+    top: -1rem;
+    right: 17rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    
+}
 .plan-card--saving{
     font-size: 1.2rem;
     color: #757575;
+}
+
+.plan-card--ca{
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: #faf8f7;
+    border: solid 2px var(--bitcoin-orange);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black)
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/icons/orange-right-arrow.svg");
+    vertical-align: text-bottom;
+}
+
+/*---- aquí irá en footer*/
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color:var(--bitcoin-orange);
+
+}
+footer section{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left a{
+    text-decoration: none;
+    color: var(--just-white);
 }
